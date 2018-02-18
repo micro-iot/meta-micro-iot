@@ -21,4 +21,4 @@ do_prepare_sysupgrade() {
     rm ${DEPLOY_DIR_IMAGE}/_sys
 }
 
-addtask prepare_sysupgrade after before do_build
+addtask prepare_sysupgrade after image_complete
