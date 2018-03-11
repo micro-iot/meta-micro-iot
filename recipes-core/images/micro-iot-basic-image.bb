@@ -8,7 +8,7 @@ IMAGE_FSTYPES = "squashfs-xz jffs2"
 # EXTRA_IMAGECMD_jffs2_remove = "--pad"
 EXTRA_IMAGECMD_jffs2 += "-x lzo -x zlib"
 
-IMAGE_INSTALL += "mtd-utils "
+IMAGE_INSTALL += "mtd-utils iw"
 
 do_prepare_sysupgrade() {
     cat ${DEPLOY_DIR_IMAGE}/uImage > ${DEPLOY_DIR_IMAGE}/sys
