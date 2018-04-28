@@ -1,0 +1,4 @@
+iface eth0 inet static
+    address 10.10.10.123
+    netmask 255.255.255.0
+    gateway 10.10.10.123
