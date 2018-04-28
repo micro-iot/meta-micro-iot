@@ -1,6 +1,6 @@
 require recipes-core/images/core-image-minimal.bb
 
-DEPENDS = "linux-yocto-linkit7688 padjffs2-native"
+DEPENDS = "linux-yocto-linkit7688-4.4.92 padjffs2-native"
 
 IMAGE_FSTYPES = "squashfs-xz jffs2"
 # IMAGE_FEATURES += "read-only-rootfs"
@@ -8,7 +8,7 @@ IMAGE_FSTYPES = "squashfs-xz jffs2"
 # EXTRA_IMAGECMD_jffs2_remove = "--pad"
 EXTRA_IMAGECMD_jffs2 += "-x lzo -x zlib"
 
-IMAGE_INSTALL += "mtd-utils iw"
+IMAGE_INSTALL += "mtd-utils iw swconfig"
 
 do_prepare_sysupgrade() {
     cat ${DEPLOY_DIR_IMAGE}/uImage > ${DEPLOY_DIR_IMAGE}/sys
