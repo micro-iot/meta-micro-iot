@@ -15,6 +15,7 @@ IMAGE_INSTALL += "swconfig"
 IMAGE_INSTALL += "init-ifupdown"
 IMAGE_INSTALL += "wpa-supplicant"
 IMAGE_INSTALL += "packagegroup-core-ssh-dropbear"
+IMAGE_INSTALL += "iwinfocli"
 
 UBINIZE_ARGS = " -m 1 -p 0x10000 -O 4096 "
 MKUBIFS_ARGS = " -m 1 -e 61376 -c 513"
